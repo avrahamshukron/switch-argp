@@ -1,10 +1,10 @@
-objs = switch-cli.o switch.o
+objs = switch-cli.o switch.o tcp.o
 
 switch: $(objs)
 
 .PHONY: clean
 
 clean:
-	rm switch $(objs)
+	rm -v switch $(objs)
 
 all: switch

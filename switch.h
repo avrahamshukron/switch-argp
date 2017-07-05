@@ -25,13 +25,11 @@ struct switch_args {
 /*
  * Internal switch state representation
  */
-struct switch
-{
+struct infected_switch {
 	int source_fd; /* FD for the Infected source */
 	struct switch_args *args;
 };
 
-
-int switch_start(struct switch *switch);
+int switch_start(struct infected_switch *sw);
 
 #endif /* SWITCH_H */
