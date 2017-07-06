@@ -27,8 +27,16 @@ struct switch_args {
  */
 struct infected_switch {
 	int source_fd; /* FD for the Infected source */
-	struct switch_args *args;
+	struct switch_args args;
 };
+
+/**
+ * Initialize an Infected Switch
+ * @param sw:	Empty `struct infected_switch` to be used later in any call to
+* 		the switch.
+ * @param args:	Pre-populated `struct switch_args` with the desired arguments.
+ */
+void switch_init(struct infected_switch *sw, struct switch_args args);
 
 int switch_start(struct infected_switch *sw);
 

@@ -1,5 +1,11 @@
 ###C###
 
+# Sublime files
+*.sublime-*
+
+# Compiled binary
+switch
+
 # Object files
 *.o
 *.ko
